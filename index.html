@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f5c8e13b2d.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <!-- || STARTING -->
+    <div class="container">
+
+        <!--|| MAIN WEATHER REPORT BOX (RIGHT-SIDE) -->
+        <div class="weather-report">
+
+            <!-- || NAVIGATION BAR -->
+            <nav>
+                <div class="location">
+                    <h2 id="city">New Delhi</h2>
+                    <h3 id="country"><i class="fa-sharp fa-solid fa-location-dot"></i>India</h3>
+                </div>
+                <div class="search-area">
+                    <input type="text" id="search" placeholder="Enter city name..." spellcheck="false">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+
+            <!-- || CURRENT WEATHER STATUS BOX -->
+            <div class="current-status">
+
+                <!-- BOX-1  MAIN WEATHER BOX-->
+                <div class="weather weather-box1">
+                    <div class="weather-heading">
+                        <div class="weather-icon">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <div class="weather-description">
+                            <h3>weather</h3>
+                            <h4>What's the weather.</h4>
+                        </div>
+                    </div>
+                    <div class="weather-temperature">
+                        <div class="temperature">
+                            <div class="temp">
+                                <h2 id="temp">22 </h2>
+                                <img src="images/celsius.svg" alt="">
+                            </div>
+                            <img id="weather-icon" src="images/clear.png" alt="">
+                        </div>
+                        <p id="description">Partly Cloudy</p>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="box">
+                            <p>Pressure</p>
+                            <h3 id="pressure">800mb</h3>
+                        </div>
+                        <div class="box">
+                            <p>Visibility</p>
+                            <h3 id="visibility">4.3 km</h3>
+                        </div>
+                        <div class="box">
+                            <p>Humidity</p>
+                            <h3 id="humidity">87%</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!--|| Box-2 -->
+                <!-- Sunrise and Sunset-->
+                <div class="weather weather-box2">
+                    <div class="more-details">
+                        <div class="more-detail-box">
+                            <p>Sunrise & Sunset</p>
+                            <div class="sunrise-sunset">
+                                <div class="sunrise">
+                                    <span>🌄</span>
+                                    <div class="sunrise-status">
+                                        <p>Sunrise</p>
+                                        <h3 id="sunrise-time">6:41 AM</h3>
+                                    </div>
+                                </div>
+                                <div class="sunset">
+                                    <span>🌆</span>
+                                    <div class="sunset-status">
+                                        <p>Sunset</p>
+                                        <h3 id="sunset-time">5:56 PM</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- and UVI Index  -->
+
+                        <div class="more-detail-box uvi-rays-area">
+                            <img src="images/clear.png" alt="">
+                            <div class="uvi-mesurement">
+                                <div class="uvi-rays-status">
+                                    <div id="uvi-rays">20 UVI</div>
+                                    <div class="uvi-level">Moderate</div>
+                                </div>
+                                <div class="uvi-level-desc">
+                                    <span class="uvi-level2">Moderate</span> risk of from UV rays
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- || 24 HOURS WEATHER UPDATES -->
+            <div class="hourly-temperature">
+                <div class="hourly-temperature-heading">
+                    <h2>How's the <br> temperature today at?</h2>
+                </div>
+                <div class="today-at">
+                    <div class="hours-box">
+                        <p class="hours">00:00 AM</p>
+                        <img class="hourly-icon" src="images/clear.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">01:00 AM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">02:00 AM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">03:00 AM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">04:00 AM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">05:00 AM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">06:00 AM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">07:00 AM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">08:00 AM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">09:00 AM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">10:00 AM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">11:00 AM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">12:00 PM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">01:00 PM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">02:00 PM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">03:00 PM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">04:00 PM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">05:00 PM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">06:00 PM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">07:00 PM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">08:00 PM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">09:00 PM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">10:00 PM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+
+                    <div class="hours-box">
+                        <p class="hours">11:00 PM</p>
+                        <img class="hourly-icon" src="images/clouds.png" alt="">
+                        <p class="hours-temp">21.8 °c</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- || SLIDEBAR -->
+        <div class="slidebar">
+
+            <!-- Time and Date -->
+            <div class="time-date">
+                <h2 class="time">12:03:40 AM</h2>
+                <p class="date">7 March 2023, Monday</p>
+            </div>
+
+            <div class="aqi-prediction">
+
+                <h2 class="aqi-title">Air Quality</h2>
+                <p>Main pollutan : PM 2.5</p>
+                <div class="current-aqi">
+                    <div class="aqi-level">
+                        <div class="aqi">390</div>
+                        <span>AQI</span>
+                    </div>
+                    <div class="consern-level">Standard</div>
+                </div>
+            </div>
+
+            <!-- || Next 6 Days Weather report -->
+            <div class="weather-prediction">
+                <h3>6 Days Forecast</h3>
+
+                <div class="days-box">
+                    <div>
+                        <img class="days-icon" src="images/clouds.png" alt="">
+                        <div class="days">
+                            <div class="prediction-day">Sunday 10</div>
+                            <div class="prediction-desc">Cloudy</div>
+
+                        </div>
+                    </div>
+
+                    <div class="days-temp">26°c <span>/</span> 19°c</div>
+                </div>
+
+                <div class="days-box">
+                    <div>
+                        <img class="days-icon" src="images/clouds.png" alt="">
+                        <div class="days">
+                            <div class="prediction-day">Sunday 10</div>
+                            <div class="prediction-desc">Cloudy</div>
+
+                        </div>
+                    </div>
+
+                    <div class="days-temp">26°c <span>/</span> 19°c</div>
+                </div>
+
+                <div class="days-box">
+                    <div>
+                        <img class="days-icon" src="images/clouds.png" alt="">
+                        <div class="days">
+                            <div class="prediction-day">Sunday 10</div>
+                            <div class="prediction-desc">Cloudy</div>
+
+                        </div>
+                    </div>
+
+                    <div class="days-temp">26°c <span>/</span> 19°c</div>
+                </div>
+
+                <div class="days-box">
+                    <div>
+                        <img class="days-icon" src="images/clouds.png" alt="">
+                        <div class="days">
+                            <div class="prediction-day">Sunday 10</div>
+                            <div class="prediction-desc">Cloudy</div>
+
+                        </div>
+                    </div>
+
+                    <div class="days-temp">26°c <span>/</span> 19°c</div>
+                </div>
+
+                <div class="days-box">
+                    <div>
+                        <img class="days-icon" src="images/clouds.png" alt="">
+                        <div class="days">
+                            <div class="prediction-day">Sunday 10</div>
+                            <div class="prediction-desc">Cloudy</div>
+
+                        </div>
+                    </div>
+
+                    <div class="days-temp">26°c <span>/</span> 19°c</div>
+                </div>
+
+                <div class="days-box">
+                    <div>
+                        <img class="days-icon" src="images/clouds.png" alt="">
+                        <div class="days">
+                            <div class="prediction-day">Sunday 10</div>
+                            <div class="prediction-desc">Cloudy</div>
+
+                        </div>
+                    </div>
+
+                    <div class="days-temp">26°c <span>/</span> 19°c</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--|| FOOTER -->
+    <footer>
+        <div class="copyright">Copyrights <span id="copyright">2023</span> @Soni_Kumari All Rights Reserved.</div>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
