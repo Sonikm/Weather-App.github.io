@@ -24,28 +24,9 @@
     --LIGHT-TEXT: #f4f4f4;
 
     /* STANDERED SIZE AND PADDINGS */
-    --STANDERED-PADDING: 30px 40px;
+    --STANDERED-PADDING: 30px;
     --STANDERED-RADIUS: 20px;
 }
-
-/* .dark-mode{
-
-} */
-
-.light-mode {
-    /* COLORS */
-    --PRIMARY-TEXT-COLOR: #0a2348;
-    --SECONDARY-TEXT-COLOR: #fff;
-    --PRIMARY-BG-COLOR: #0a2348;
-    --SECONDARY-BG-COLOR: #f7f7f7;
-    --LIGHT-BG-COLOR: #fff;
-
-    /* TEXT */
-    --SMALL-TEXT: 14px;
-    --LETTER-SPACING: 0.8px;
-    --LIGHT-TEXT: #f4f4f4;
-}
-
 
 body {
     position: relative;
@@ -695,10 +676,6 @@ footer .copyright {
         height: 1350px;
     }
 
-    .sunrise-sunset {
-        margin-inline: 0;
-    }
-
     .slidebar {
         height: 1300px;
     }
@@ -722,6 +699,11 @@ footer .copyright {
 
     .location h3 {
         font-size: var(--SMALL-TEXT);
+    }
+
+    .current-status .weather-box2 {
+        padding: 0;
+        justify-content: center;
     }
 
     .hourly-temperature-heading h2 {
@@ -751,5 +733,10 @@ footer .copyright {
     .sunset span {
         margin-right: 5px;
         font-size: 20px;
+    }
+
+    .hours-box {
+        width: 100px;
+        height: 120px;
     }
 }

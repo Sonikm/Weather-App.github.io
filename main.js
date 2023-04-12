@@ -109,13 +109,13 @@ function checkUVraysIndex() {
         checkUviValue('Moderate', '#CCE16A');
     }
     else if (uviLevel <= 7) {
-        checkUviValue('Hight', '#d4b814');
+        checkUviValue('High', '#d4b814');
     }
     else if (uviLevel <= 10) {
-        checkUviValue('Very hight', '#d43114');
+        checkUviValue('Very high', '#d43114');
     }
     else {
-        checkUviValue('Etreme hight', '#dc15cf');
+        checkUviValue('Etreme high', '#dc15cf');
     }
 
 }
@@ -129,7 +129,7 @@ function checkUviValue(level, color) {
 }
 
 
-// || Hourse 
+// || Hours 
 function hoursWeatherReport() {
 
     hoursTemp.forEach((t, i) => {
