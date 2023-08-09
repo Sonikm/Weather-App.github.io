@@ -150,6 +150,7 @@ function forecastdayReport() {
 
     daysTemp.forEach((temp, index) => {
         temp.innerHTML = Math.round(responseData.forecast.forecastday[index].day.maxtemp_c) + '°c' + `<span> / </span>` + Math.round(responseData.forecast.forecastday[index].day.mintemp_c) + '°c';
+
     })
 
     predictionDesc.forEach((d, index) => {
@@ -157,15 +158,16 @@ function forecastdayReport() {
     })
 
     nextDay.forEach((day, index) => {
-        let weekdate = new Date(responseData.forecast.forecastday[index + 1].date).getDate();
-        let weekday = weekDays[new Date(responseData.forecast.forecastday[index + 1].date).getDay()];
+        let weekdate = new Date(responseData.forecast.forecastday[index].date).getDate();
+        let weekday = weekDays[new Date(responseData.forecast.forecastday[index].date).getDay()];
 
         day.innerHTML = `${weekday} ${weekdate}`
+        
     })
 }
 
 function time() {
-    var timezone = responseData.location.tz_id;;
+    var timezone = responseData.location?.tz_id;;
     var now = new Date().toLocaleTimeString('en-US', { timeZone: timezone });
     currentTime.innerHTML = now;
 
@@ -179,7 +181,7 @@ setInterval(() => {
 }, 1000)
 
 
-searchCity.addEventListener('keyup', () => {
+searchCity.addEventListener('keydown', () => {
     weatherReport(searchCity.value)
 })
 

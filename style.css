@@ -516,7 +516,7 @@ nav {
     justify-content: space-between;
     width: 100%;
     border-radius: var(--STANDERED-RADIUS);
-    padding: 14px 15px;
+    padding: 20px 15px;
     box-shadow: 5px 5px 10px #cccccc,
         -5px -5px 10px #f4f4f4;
 }
